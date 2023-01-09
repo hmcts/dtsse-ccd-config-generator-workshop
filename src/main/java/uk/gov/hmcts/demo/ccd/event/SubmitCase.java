@@ -34,16 +34,9 @@ public class SubmitCase implements CCDConfig<CaseData, State, UserRole> {
             .grant(CRU, SOLICITOR, CITIZEN)
             .grantHistoryOnly(CASE_WORKER)
             .aboutToSubmitCallback(this::aboutToSubmit)
-            .submittedCallback(this::submitted)
             .fields()
                 .mandatory(CaseData::getDocuments)
                 .done();
-    }
-
-    private SubmittedCallbackResponse submitted(CaseDetails<CaseData, State> caseDataStateCaseDetails,
-                                                                                     CaseDetails<CaseData, State> caseDataStateCaseDetails1) {
-
-        return null;
     }
 
     private AboutToStartOrSubmitResponse<CaseData, State> aboutToSubmit(CaseDetails<CaseData, State> beforeDetails,
