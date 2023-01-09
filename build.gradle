@@ -2,6 +2,11 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.7'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'hmcts.ccd.sdk' version '5.2.1'
+}
+
+ccd {
+	configDir = file('build/ccd-definition')
 }
 
 group = 'com.example'
