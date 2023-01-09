@@ -3,6 +3,7 @@ package uk.gov.hmcts.demo.ccd;
 import org.springframework.stereotype.Component;
 import uk.gov.hmcts.ccd.sdk.api.CCDConfig;
 import uk.gov.hmcts.ccd.sdk.api.ConfigBuilder;
+import uk.gov.hmcts.demo.ccd.model.CaseData;
 
 @Component
 public class Config implements CCDConfig<CaseData, State, UserRole> {
