@@ -9,6 +9,7 @@ import uk.gov.hmcts.ccd.sdk.api.HasRole;
 @Getter
 public enum UserRole implements HasRole {
     CASE_WORKER("caseworker-demo", "CRU"),
+    CASE_WORKER_CAA("caseworker-caa", "CRU"),
     SOLICITOR("caseworker-demo-solicitor", "CRU"),
     APPLICANT_1_SOLICITOR("[APPONESOLICITOR]", "CRU"),
     APPLICANT_2_SOLICITOR("[APPTWOSOLICITOR]", "CRU"),

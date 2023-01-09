@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import uk.gov.hmcts.ccd.sdk.api.CCD;
 import uk.gov.hmcts.ccd.sdk.type.Document;
 import uk.gov.hmcts.ccd.sdk.type.ListValue;
+import uk.gov.hmcts.demo.ccd.access.ApplicantAccess;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -28,10 +29,10 @@ public class CaseData {
 
     private String applicant1LastName;
 
-    @CCD(label = "First Name")
+    @CCD(label = "First Name", access = {ApplicantAccess.class})
     private String applicant2FirstName;
 
-    @CCD(label = "Last Name", hint = "Enter their surname")
+    @CCD(label = "Last Name", hint = "Enter their surname", access = {ApplicantAccess.class})
     private String applicant2LastName;
 
     @JsonFormat(pattern = "yyyy-MM-dd")

@@ -13,6 +13,7 @@ public class Config implements CCDConfig<CaseData, State, UserRole> {
         builder.caseType("demo", "My Case Type", "Case type description");
         builder.jurisdiction("demo-jurisdiction", "Jurisdiction", "Jurisdiction description");
         builder.setCallbackHost(System.getenv().getOrDefault("API_URL", "http://localhost:4013"));
+        // builder.shutterService(UserRole.SOLICITOR);
     }
 
 }
