@@ -22,6 +22,11 @@ dependencies {
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
 	implementation 'com.fasterxml.jackson.core:jackson-core'
 	implementation 'com.fasterxml.jackson.core:jackson-annotations'
+//	implementation 'com.google.guava:guava:31.1-jre'
+//	implementation group: 'com.github.hmcts', name: 'ccd-client', version: 'v4.9.1'
+
+//	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+//	implementation 'io.github.openfeign:feign-jackson'
 
 	implementation 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
