@@ -5,16 +5,13 @@ This is a demo project that integrates the CCD Config Generator. Each Topic has 
 ## Topics
 
 1. Installation and gradle tasks
-2. Case type configuration
-3. Model
-4. States
-5. User roles
-6. Events
-7. Permissions
+2. Model, States, User roles
+3. Events
+4. Permissions
    - Events
    - Fields
    - States
    - Case type
-8. Unwrapped types
-9. Local development
+5. Unwrapped types
+6. Local development
   
