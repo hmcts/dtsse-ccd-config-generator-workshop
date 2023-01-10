@@ -12,6 +12,7 @@ This is a demo project that integrates the CCD Config Generator. Each Topic has 
    - Fields
    - States
    - Case type
-5. Unwrapped types
-6. Local development
+5. Tabs and workbaskets
+6. Unwrapped types
+7. Local development
   
