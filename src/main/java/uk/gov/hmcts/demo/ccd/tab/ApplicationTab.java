@@ -22,10 +22,10 @@ public class ApplicationTab implements CCDConfig<CaseData, State, UserRole> {
             .field("hyphenatedCaseReference", "hyphenatedCaseReference=alwaysFalse")
             .label("Label-Heading", null, "### Case Ref: ${hyphenatedCaseReference}")
                 .label("Label-Applicant1", null, "## Applicant 1")
-                    .field(CaseData::getApplicant1FirstName)
-                    .field(CaseData::getApplicant1LastName)
+                    .field("applicant1FirstName")
+                    .field("applicant1LastName")
                 .label("Label-Applicant2", null, "## Applicant 2")
-                    .field(CaseData::getApplicant2FirstName)
-                    .field(CaseData::getApplicant2LastName);
+                    .field("applicant2FirstName")
+                    .field("applicant2LastName");
     }
 }

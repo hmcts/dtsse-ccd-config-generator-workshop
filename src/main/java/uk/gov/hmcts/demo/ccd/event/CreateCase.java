@@ -5,6 +5,7 @@ import uk.gov.hmcts.ccd.sdk.api.CCDConfig;
 import uk.gov.hmcts.ccd.sdk.api.ConfigBuilder;
 import uk.gov.hmcts.demo.ccd.State;
 import uk.gov.hmcts.demo.ccd.UserRole;
+import uk.gov.hmcts.demo.ccd.model.Applicant;
 import uk.gov.hmcts.demo.ccd.model.CaseData;
 import uk.gov.hmcts.demo.ccd.model.Complaint;
 
@@ -32,8 +33,10 @@ public class CreateCase implements CCDConfig<CaseData, State, UserRole> {
             .fields()
                 .page("Create Your Case")
                 .label("labelSubmitApplicant", "## A heading in XUI")
-                .mandatoryWithLabel(CaseData::getApplicant1FirstName, "Applicant 1 name")
-                .optionalWithLabel(CaseData::getApplicant1LastName, "Applicant 1 surname")
+                .complex(CaseData::getApplicant1)
+                    .mandatoryWithLabel(Applicant::getFirstName, "Applicant 1 name")
+                    .optionalWithLabel(Applicant::getLastName, "Applicant 1 surname")
+                    .done()
                 .complex(CaseData::getComplaint)
                     .mandatory(Complaint::getComplaint)
                     .optional(Complaint::getDate)

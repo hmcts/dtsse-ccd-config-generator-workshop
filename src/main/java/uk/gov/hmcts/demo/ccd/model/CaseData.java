@@ -2,6 +2,7 @@ package uk.gov.hmcts.demo.ccd.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,15 +26,22 @@ public class CaseData {
 
     private String hyphenatedCaseRef;
 
-    private String applicant1FirstName;
+//    private String applicant1FirstName;
+//
+//    private String applicant1LastName;
+//
+//    @CCD(label = "First Name", access = {ApplicantAccess.class})
+//    private String applicant2FirstName;
+//
+//    @CCD(label = "Last Name", hint = "Enter their surname", access = {ApplicantAccess.class})
+//    private String applicant2LastName;
 
-    private String applicant1LastName;
+    @JsonUnwrapped(prefix = "applicant1")
+    private Applicant applicant1;
 
-    @CCD(label = "First Name", access = {ApplicantAccess.class})
-    private String applicant2FirstName;
-
-    @CCD(label = "Last Name", hint = "Enter their surname", access = {ApplicantAccess.class})
-    private String applicant2LastName;
+    @JsonUnwrapped(prefix = "applicant2")
+    @CCD(access = {ApplicantAccess.class})
+    private Applicant applicant2;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dueDate;
