@@ -15,9 +15,12 @@ sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 dependencies {
+	implementation group: 'com.github.hmcts', name: 'ccd-config-generator', version: 'DEV-SNAPSHOT'
+
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
 	implementation 'com.fasterxml.jackson.core:jackson-core'
